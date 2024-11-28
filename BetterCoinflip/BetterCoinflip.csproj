@@ -13,6 +13,7 @@
         <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <LangVersion>latest</LangVersion>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,13 +35,41 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
+        <Reference Include="Assembly-CSharp">
+          <HintPath>Deps\Assembly-CSharp.dll</HintPath>
+        </Reference>
+        <Reference Include="Assembly-CSharp-firstpass">
+          <HintPath>Deps\Assembly-CSharp-firstpass.dll</HintPath>
+        </Reference>
+        <Reference Include="Mirror">
+          <HintPath>Deps\Mirror.dll</HintPath>
+        </Reference>
+        <Reference Include="NorthwoodLib">
+          <HintPath>Deps\NorthwoodLib.dll</HintPath>
+        </Reference>
+        <Reference Include="PluginAPI">
+          <HintPath>Deps\PluginAPI.dll</HintPath>
+        </Reference>
         <Reference Include="System"/>
         <Reference Include="System.Core"/>
         <Reference Include="System.Data"/>
         <Reference Include="System.Xml"/>
+        <Reference Include="UnityEngine">
+          <HintPath>Deps\UnityEngine.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule">
+          <HintPath>Deps\UnityEngine.CoreModule.dll</HintPath>
+        </Reference>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Program.cs"/>
+        <Compile Include="CoinflipManager.cs" />
+        <Compile Include="Effects\ExplodeEffect.cs" />
+        <Compile Include="Effects\RespawnPlayerEffect.cs" />
+        <Compile Include="Extensions\Extensions.cs" />
+        <Compile Include="Interfaces\ICoinflipEffect.cs" />
+        <Compile Include="Interfaces\ICoinflipEffectHeads.cs" />
+        <Compile Include="Interfaces\ICoinflipEffectTails.cs" />
+        <Compile Include="Plugin.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>
     <ItemGroup>
