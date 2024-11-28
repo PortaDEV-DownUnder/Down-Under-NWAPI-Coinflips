@@ -1,4 +1,4 @@
-﻿namespace NWAPIMods
+﻿namespace BetterCoinflip
 {
     internal class Program
     {
